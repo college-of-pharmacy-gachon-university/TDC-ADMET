@@ -51,3 +51,10 @@ Getting started with ADMET-Stack is straightforward:
     jupyter lab
     ```
 
+## Performance Analysis of ADMET-Stack and Baseline Models
+
+![TDC ADMET Performance AUROC](figures/admet_performance_auroc_final.png)
+![TDC ADMET Performance AUPRC](figures/admet_performance_auprc_final.png)
+![TDC ADMET Performance MAE](figures/admet_performance_mae_final.png)
+![TDC ADMET Performance Spearman](figures/admet_performance_spearman_final.png)
+
