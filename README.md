@@ -4,7 +4,7 @@
 
 ### A Multi-Representation Ensemble Model for Accurate and Generalizable ADMET Prediction
 
-Welcome to **ADMET-Stack**, A novel stacked ensemble integrating fingerprints, physicochemical descriptors, and SELFIES embeddings for accurate and generalizable ADMET prediction.
+Welcome to **ADMET-Stack**, a novel stacked ensemble integrating **fingerprints**, **physicochemical** descriptors, and **SELFIES embeddings** for accurate and generalizable ADMET prediction.
 
 **Key Features:**
 
