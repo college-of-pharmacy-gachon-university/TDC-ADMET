@@ -20,7 +20,8 @@ ADMET-Stack/
 ├── notebooks/          # Jupyter notebooks for analysis and model development
 ├── models/             # Saved machine learning models (.pkl files)
 ├── figures/            # Visualizations and project-related images
-├── data/               # Raw and processed datasets (.csv files)
+├── data/               # Raw and processed datasets (.csv files
+├── results/            # models performance (.csv files)
 ├── environment.yml     # Conda environment configuration for reproducibility
 └── README.md           # Project overview and documentation
 ```
@@ -64,4 +65,5 @@ Getting started with ADMET-Stack is straightforward:
 
 **TDC ADMET Performance Spearman**
 ![TDC ADMET Performance Spearman](figures/admet_performance_spearman_final.png)
+
 
