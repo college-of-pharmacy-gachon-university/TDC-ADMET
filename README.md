@@ -2,7 +2,7 @@
 ---
 ![ADMET-Stack Architecture](figures/ADME-Stack_Architecture.png)
 
-### A Multi-Representation Ensemble Model for Accurate and Generalizable ADMET Prediction
+### ADMET-Stack: A Multi-Representation Ensemble Framework for ADMET Prediction
 
 Welcome to **ADMET-Stack**, a novel stacked ensemble integrating **fingerprints**, **physicochemical** descriptors, and **SELFIES embeddings** for accurate and generalizable ADMET prediction.
 
@@ -55,15 +55,17 @@ Getting started with ADMET-Stack is straightforward:
 ## Performance Analysis of ADMET-Stack and Baseline Models
 
 **TDC ADMET Performance AUROC**
-![](figures/admet_performance_auroc_final.png)
+![](figures/admet_performance_auroc.tif)
 
 **TDC ADMET Performance AUROC**
-![TDC ADMET Performance AUPRC](figures/admet_performance_auprc_final.png)
+![TDC ADMET Performance AUPRC](figures/admet_performance_auprc.tif)
 
 **TDC ADMET Performance MAE**
-![TDC ADMET Performance MAE](figures/admet_performance_mae_final.png)
+![TDC ADMET Performance MAE](figures/admet_performance_mae.tif)
 
 **TDC ADMET Performance Spearman**
-![TDC ADMET Performance Spearman](figures/admet_performance_spearman_final.png)
+![TDC ADMET Performance Spearman](figures/admet_performance_spearman.tif)
 
+**Win Rate Analysis Showing the Percentage of Tasks in which ADMET-Stack Outperformed Baseline Methods**
+![Fig_Win_Rate_Analysis](figures/Fig_Win_Rate_Analysis.tif)
 
