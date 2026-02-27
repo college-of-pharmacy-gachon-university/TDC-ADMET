@@ -1,0 +1,5 @@
+﻿Endpoint,Model,MAE,RMSE,R2,Spearman
+VDss_Lombardo,R,3.597 ± 0.065,38.105 ± 3.073,0.184 ± 0.066,0.643 ± 0.020
+Lipophilicity_AstraZeneca,M_A_E_R_MC_TI_EM32,23.031 ± 0.2435,6817.298 ± 251.534,0.525 ± 0.018,0.554± 0.008
+Clearance_Hepatocyte_AZ,M_A_E_S_TI_EM64,33.402 ± 0.200,2083.216 ± 16.155,0.165 ± 0.006,0.536 ± 0.004
+Clearance_Microsome_AZ,M_A_E_S_R_MC_EM32,26.241 ± 0.101,1485.111 ± 10.285,0.215 ± 0.005,0.652 ± 0.004
