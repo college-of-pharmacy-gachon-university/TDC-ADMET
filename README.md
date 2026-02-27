@@ -55,18 +55,19 @@ Getting started with ADMET-Stack is straightforward:
 ## Performance Analysis of ADMET-Stack and Baseline Models
 
 **TDC ADMET Performance AUROC**
-![TDC ADMET Performance AUROC](figures/admet_performance_auroc.tif)
+![TDC ADMET Performance AUROC](figures/admet_performance_auroc.png)
 
 **TDC ADMET Performance AUROC**
-![TDC ADMET Performance AUPRC](figures/admet_performance_auprc.tif)
+![TDC ADMET Performance AUPRC](figures/admet_performance_auprc.png)
 
 **TDC ADMET Performance MAE**
-![TDC ADMET Performance MAE](figures/admet_performance_mae.tif)
+![TDC ADMET Performance MAE](figures/admet_performance_mae.png)
 
 **TDC ADMET Performance Spearman**
-![TDC ADMET Performance Spearman](figures/admet_performance_spearman.tif)
+![TDC ADMET Performance Spearman](figures/admet_performance_spearman.png)
 
 **Win Rate Analysis Showing the Percentage of Tasks in which ADMET-Stack Outperformed Baseline Methods**
-![Fig_Win_Rate_Analysis](figures/Fig_Win_Rate_Analysis.tif)
+![Fig_Win_Rate_Analysis](figures/Fig_Win_Rate_Analysis.png)
+
 
 
