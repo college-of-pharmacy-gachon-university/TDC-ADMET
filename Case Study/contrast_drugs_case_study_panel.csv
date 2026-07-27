@@ -1,0 +1,21 @@
+,QED,ADMET_risk_favorability,expected_favorability,residual
+Paroxetine,0.934,41.617,47.867,-6.250
+Leflunomide,0.911,62.617,47.746,14.871
+Granisetron,0.926,47.883,47.825,0.059
+Pergolide,0.909,38.917,47.735,-8.818
+Molindone,0.918,55.333,47.782,7.551
+Chloramphenicol palmitate,0.055,29.983,43.241,-13.258
+Clindamycin,0.438,68.183,45.257,22.927
+Rifapentine,0.093,25.200,43.441,-18.241
+Candesartan cilexetil,0.141,15.817,43.694,-27.877
+Rifampin,0.109,48.083,43.525,4.558
+Chlorprothixene,0.654,37.517,46.393,-8.877
+Atovaquone,0.762,41.933,46.962,-5.028
+Clomipramine,0.818,42.133,47.256,-5.123
+Methixene,0.766,31.083,46.983,-15.899
+Ethopropazine,0.765,44.733,46.977,-2.244
+Famotidine,0.287,46.983,44.462,2.521
+Cimetidine,0.309,64.133,44.578,19.556
+Tegaserod,0.274,47.117,44.394,2.723
+Cefdinir,0.231,62.033,44.167,17.866
+Carbenicillin Indanyl,0.275,63.383,44.399,18.984
