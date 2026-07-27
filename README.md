@@ -69,5 +69,8 @@ Getting started with ADMET-Stack is straightforward:
 **Win Rate Analysis Showing the Percentage of Tasks in which ADMET-Stack Outperformed Baseline Methods**
 ![Fig_Win_Rate_Analysis](figures/Fig_Win_Rate_Analysis.png)
 
+**Representative ADMET-Stack percentile radar plots for three case-study drugs**
+![Fig_Win_Rate_Analysis](figures/3_selected_drugs.png)
+
 
 
