@@ -261,11 +261,9 @@ public TDC ADMET Leaderboard.
 Ranks are computed against the public leaderboard as `1 + (entries strictly better) + (entries
 tied)`. `Bioavailability_Ma` scores below every listed entry and is therefore not assigned a rank.
 
-ADMET-Stack was compared against ADMET-AI, ADMETrix, MiniMol, and MapLight+GNN:
-
 ![ADMET-Stack](https://img.shields.io/badge/-ADMET--Stack-2CA02C?style=flat-square)
 ![ADMET-AI](https://img.shields.io/badge/-ADMET--AI-FF7F0E?style=flat-square)
-![ADMETrix](https://img.shields.io/badge/-ADMETrix-B39DDB?style=flat-square)
+![ADMETrix](https://img.shields.io/badge/-ADMETrix-9467BD?style=flat-square)
 ![MiniMol](https://img.shields.io/badge/-MiniMol-E377C2?style=flat-square)
 ![MapLight+GNN](https://img.shields.io/badge/-MapLight%2BGNN-17BECF?style=flat-square)
 
