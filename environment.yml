@@ -1,0 +1,67 @@
+# ADMET-Stack — reproducible Conda environment
+#
+#   conda env create -f environment.yml
+#   conda activate admet-stack
+#
+# Derived from the environment used to produce the published results, reduced to
+# the packages ADMET-Stack actually imports. Transitive dependencies are resolved
+# by Conda and are deliberately not pinned here.
+#
+# IMPORTANT — RDKit version:
+#   The 217 physicochemical descriptors reported in the paper are
+#   `len(rdkit.Chem.Descriptors._descList)`, which is version dependent
+#   (217 from RDKit 2024.03; 210 in earlier releases). Do not relax this pin
+#   without re-checking the descriptor count.
+#
+# NOTE — GPU:
+#   This environment installs CPU builds of PyTorch, LightGBM and XGBoost, which
+#   are sufficient for every step of the workflow. The published training
+#   notebooks request GPU devices; see "Hardware and GPU notes" in the README for
+#   the one-line change needed to run them on CPU.
+
+name: admet-stack
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # --- core scientific stack -------------------------------------------------
+  - numpy=1.26.4
+  - pandas=2.1.4
+  - scipy=1.15.*             # 1.15.2 / 1.15.3 both verified
+  - scikit-learn=1.7.2
+  - joblib=1.5.3
+
+  # --- cheminformatics -------------------------------------------------------
+  - rdkit=2026.03.3          # fingerprints, MACCS, ErG, 217 descriptors
+
+  # --- gradient boosting base learners --------------------------------------
+  - lightgbm=4.4.0
+  - xgboost=3.2.0
+
+  # --- SELFIES embedding module ---------------------------------------------
+  - pytorch=2.5.0            # conda-forge resolves a CPU build by default;
+                             # for CUDA use the pytorch channel instead:
+                             #   conda install -c pytorch -c nvidia \
+                             #       pytorch=2.5.0 pytorch-cuda=11.8
+
+  # --- hyperparameter optimisation ------------------------------------------
+  - optuna=4.9.0
+
+  # --- figures and tabular I/O ----------------------------------------------
+  - matplotlib-base=3.10.9
+  - seaborn=0.13.2
+  - openpyxl=3.1.5           # reads Supplementary Dataset S1 (.xlsx)
+  - tqdm=4.68.3
+
+  # --- notebook runtime ------------------------------------------------------
+  - jupyterlab=4.6.0
+  - ipykernel=7.3.0
+  - ipywidgets=8.1.8
+
+  - pip
+  - pip:
+      - selfies==2.2.0       # SMILES <-> SELFIES conversion and tokenisation
+      - PyTDC==1.1.15        # downloads the official TDC ADMET benchmark splits

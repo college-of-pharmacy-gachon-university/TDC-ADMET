@@ -1,0 +1,58 @@
+# ADMET-Stack — pip requirements
+#
+#   python -m venv .venv && .venv\Scripts\activate     # Windows
+#   python -m venv .venv && source .venv/bin/activate  # Linux / macOS
+#   pip install -r requirements.txt
+#
+# Requires Python 3.10. Prefer environment.yml if you use Conda: the Conda build
+# of RDKit is generally more reliable on Windows.
+#
+# Only direct dependencies are pinned; pip resolves the rest.
+#
+# IMPORTANT — RDKit version:
+#   The 217 physicochemical descriptors reported in the paper are
+#   `len(rdkit.Chem.Descriptors._descList)`, which is version dependent
+#   (217 from RDKit 2024.03; 210 in earlier releases). Do not relax this pin
+#   without re-checking the descriptor count.
+#
+# NOTE — GPU:
+#   The wheels below are CPU builds, which are sufficient for the whole
+#   workflow. For CUDA 11.8 PyTorch instead run:
+#       pip install torch==2.5.0 --index-url https://download.pytorch.org/whl/cu118
+#   See "Hardware and GPU notes" in the README before running the training
+#   notebooks, which request GPU devices by default.
+
+# --- core scientific stack ---------------------------------------------------
+numpy==1.26.4
+pandas==2.1.4
+scipy==1.15.3                 # 1.15.2 also verified
+scikit-learn==1.7.2
+joblib==1.5.3
+
+# --- cheminformatics ---------------------------------------------------------
+rdkit==2026.3.3               # fingerprints, MACCS, ErG, 217 descriptors
+selfies==2.2.0                # SMILES <-> SELFIES conversion and tokenisation
+
+# --- gradient boosting base learners ----------------------------------------
+lightgbm==4.4.0
+xgboost==3.2.0
+
+# --- SELFIES embedding module ------------------------------------------------
+torch==2.5.0
+
+# --- hyperparameter optimisation ---------------------------------------------
+optuna==4.9.0
+
+# --- benchmark data ----------------------------------------------------------
+PyTDC==1.1.15                 # downloads the official TDC ADMET benchmark splits
+
+# --- figures and tabular I/O -------------------------------------------------
+matplotlib==3.10.9
+seaborn==0.13.2
+openpyxl==3.1.5               # reads Supplementary Dataset S1 (.xlsx)
+tqdm==4.68.3
+
+# --- notebook runtime --------------------------------------------------------
+jupyterlab==4.6.0
+ipykernel==7.3.0
+ipywidgets==8.1.8
