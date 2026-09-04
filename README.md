@@ -17,15 +17,6 @@ descriptors and SELFIES-derived encodings across **all 22 endpoints** of the
 Because the architecture never changes, differences in performance are attributable to the
 representation rather than to the model.
 
-## Scientific motivation
-
-Most ADMET papers introduce a new architecture *and* a new representation at the same time,
-so the two contributions cannot be separated. Published benchmarks also frequently rely on
-undisclosed splits, which makes cross-study numbers hard to interpret. This work fixes the
-architecture and the splitting protocol (official TDC scaffold splits) and varies only the
-representation, then asks a practical question: **how much representational complexity does
-an ADMET endpoint actually need?**
-
 ## Main contributions
 
 1. **A representation-controlled benchmark.** 54 representation configurations × 22 endpoints
