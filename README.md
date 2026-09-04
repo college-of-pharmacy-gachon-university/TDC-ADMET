@@ -427,6 +427,3 @@ stacked ensemble of four learners with 10-fold internal cross-validation — on 
 released predictions and archives instead.
 
 ---
-
-No license has been specified for this repository yet. Until one is added, all rights are
-reserved and reuse requires permission from the authors.
