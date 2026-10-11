@@ -1,0 +1,24 @@
+name: admet-stack
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - rdkit>=2024.03
+  - numpy>=1.24,<2.2
+  - pandas>=2.0
+  - scipy>=1.10
+  - scikit-learn>=1.3
+  - lightgbm>=4.0
+  - py-xgboost>=2.0
+  - pytorch>=2.0
+  - optuna>=3.4
+  - statsmodels>=0.14
+  - joblib>=1.3
+  - tqdm>=4.65
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - jupyterlab
+  - pip
+  - pip:
+      - selfies>=2.1.1
+      - PyTDC>=0.4.1

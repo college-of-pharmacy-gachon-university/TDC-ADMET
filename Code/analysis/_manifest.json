@@ -1,0 +1,102 @@
+[
+ [
+  "a01_verify_retention.py",
+  "Checks the 94.3% retention figure against the published 54x22 grid.",
+  "data/si_tables.json"
+ ],
+ [
+  "a02_retention_sensitivity.py",
+  "Table S27: retention under five aggregation rules plus normalised regret.",
+  "data/si_tables.json"
+ ],
+ [
+  "a03_winners_curse_mcda.py",
+  "Winner's-curse bias in the retention reference and the MCDA block ranking.",
+  "data/si_tables.json"
+ ],
+ [
+  "a04_block_cluster_bootstrap.py",
+  "Table S26: endpoint-cluster bootstrap for feature-block marginal effects.",
+  "data/si_tables.json"
+ ],
+ [
+  "a05_block_mixed_model.py",
+  "Table S26: linear mixed-effects model with a random intercept per endpoint.",
+  "data/si_tables.json"
+ ],
+ [
+  "a06_block_mixed_model_robustness.py",
+  "Robustness of the mixed-effects block estimates.",
+  "data/si_tables.json"
+ ],
+ [
+  "a07_fixed_config_reanalysis.py",
+  "Table S29: baseline comparison using fixed configurations, with Holm correction.",
+  "data/si_tables.json"
+ ],
+ [
+  "a08_split_sample_summary.py",
+  "Table S30: selection optimism measured by repeated split-sample selection.",
+  "data/honest_selection.json"
+ ],
+ [
+  "a09_classification_difference_CI.py",
+  "Table S38: bootstrap CIs and equivalence tests for the baseline differences.",
+  "none (self-contained)"
+ ],
+ [
+  "a10_rdkit_descriptor_composition.py",
+  "Table S1: how many of the 217 RDKit descriptors encode structural information.",
+  "none (self-contained)"
+ ],
+ [
+  "a11_external_prevalence_audit.py",
+  "Table S31: class prevalence, majority-class rate and threshold-corrected metrics.",
+  "none (self-contained)"
+ ],
+ [
+  "a12_bootstrap_test_CIs.py",
+  "Table S28: bootstrap CIs over test compounds for the reported performance.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a13_split_sample_selection.py",
+  "Runs the split-sample selection that a08 summarises.",
+  "data/honest_selection.json"
+ ],
+ [
+  "a14_config_dimensionalities.py",
+  "Table S24: feature dimensionality of each of the 54 configurations.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a15_validation_selected_configs.py",
+  "Table S44: configurations chosen on a held-out validation partition.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a16_inhouse_ames_overlap.py",
+  "Section 2.8.4: overlap between the in-house AMES collection and TDC AMES.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a17_inhouse_ames_recompute.py",
+  "Section 2.8.4: metrics on the deduplicated, overlap-filtered AMES subset.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a18_diagnose_below_chance.py",
+  "Diagnostics for the two external sets with below-chance AUROC.",
+  "run artifacts; set the path constant at the top"
+ ],
+ [
+  "a19_make_fig_S6.py",
+  "Fig. S6: QED against the aggregate ADMET risk-favorability score.",
+  "data/honest_selection.json"
+ ],
+ [
+  "a20_benchmark_cost.py",
+  "Optional probe for training time, inference time and peak memory.",
+  "run artifacts; set the path constant at the top"
+ ]
+]
