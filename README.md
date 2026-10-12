@@ -286,25 +286,36 @@ for ADMET-Stack — better or equal in only 11 of 24 comparisons (46 %), versus 
 
 ### External validation
 
-Endpoint-specific models were evaluated on 13 external datasets (14 evaluation sets) from an
-in-house collection, PharmaBench, AutoML and Admetica. Selected results:
+The endpoint-specific models were evaluated on external data from an in-house collection,
+PharmaBench, AutoML and Admetica. We call this external *evaluation* rather than independent
+validation, because the degree of independence differs from one dataset to the next.
 
-| Property | n | ACC | AUROC | AUPRC | Source |
-|---|---|---|---|---|---|
-| AMES | 25,536 | 0.836 | 0.917 | 0.786 | in-house |
-| BBB | 654 | 0.660 | 0.741 | 0.763 | PharmaBench |
-| BBB (test subset) | 66 | 0.833 | 0.920 | 0.958 | AutoML |
-| BBB (full) | 323 | 0.851 | 0.921 | 0.962 | AutoML |
-| CYP2C9 inhibition | 387 | 0.429 | 0.949 | 0.984 | AutoML |
-| CYP2D6 inhibition | 988 | 0.713 | 0.793 | 0.674 | AutoML |
-| CYP3A4 inhibition | 1,186 | 0.709 | 0.795 | 0.707 | AutoML |
-| P-gp substrate | 528 | 0.590 | 0.664 | 0.706 | AutoML |
-| hERG | 20,982 | 0.763 | 0.634 | 0.917 | Admetica |
+Complete results for all 28 evaluation sets are in **Supplementary Table S31**, with positive-class
+prevalence, majority-class rate, balanced accuracy, MCC and bootstrap confidence intervals in
+Table S31 (continued). Transfer is strongly endpoint dependent, and that table includes several
+sets on which the models perform poorly — please read it rather than the selection shown here when
+judging external generalisation.
 
-Transfer is strongly endpoint dependent. The complete results across **all** external datasets,
-including several on which the models perform poorly, are in Supplementary Table S32 — please
-read that table rather than this selection when judging external generalisation. The external
-datasets and evaluation code are **not** in this repository (see *Limitations*).
+| Property | Total | Active | Inactive | ACC. | AUROC | AUPRC | Source |
+|---|---|---|---|---|---|---|---|
+| AMES | 25,536 | 5,810 | 19,726 | 0.834 ± 0.001 | 0.916 ± 0.001 | 0.784 ± 0.002 | In-house |
+| BBB | 654 | 361 | 293 | 0.658 ± 0.004 | 0.734 ± 0.005 | 0.755 ± 0.006 | PharmaBench |
+| BBB (test sets) | 66 | 44 | 22 | 0.848 | 0.906 | 0.950 | AutoML |
+| BBB (all) | 323 | 228 | 95 | 0.851 | 0.915 | 0.961 | AutoML |
+| CYP2C9_In. (test sets) | 387 | 304 | 83 | 0.395 | 0.930 | 0.975 | AutoML |
+| CYP2D6_In. (test sets) | 988 | 351 | 637 | 0.677 | 0.777 | 0.646 | AutoML |
+| CYP3A4_In. (test sets) | 1,186 | 494 | 692 | 0.711 | 0.792 | 0.714 | AutoML |
+| P_gp (test sets) | 528 | 289 | 239 | 0.591 | 0.653 | 0.695 | AutoML |
+| AMES | 82 | 56 | 26 | 0.746 ± 0.022 | 0.840 ± 0.013 | 0.922 ± 0.009 | Admetica |
+| CYP2C19_Sub. | 210 | 122 | 88 | 0.419 ± 0.000 | 0.561 ± 0.008 | 0.648 ± 0.010 | Admetica |
+| CYP2C9_Sub. | 217 | 124 | 93 | 0.429 ± 0.000 | 0.611 ± 0.008 | 0.680 ± 0.008 | Admetica |
+| CYP2D6_Sub. | 229 | 149 | 80 | 0.445 ± 0.004 | 0.679 ± 0.006 | 0.797 ± 0.003 | Admetica |
+| CYP3A4_Sub. | 292 | 249 | 43 | 0.561 ± 0.018 | 0.617 ± 0.016 | 0.904 ± 0.004 | Admetica |
+| hERG | 20,982 | 18,173 | 2,809 | 0.764 ± 0.002 | 0.630 ± 0.004 | 0.915 ± 0.002 | Admetica |
+
+The external **datasets** are third-party and are not redistributed here. The evaluation code is in
+this repository: `Code/pipeline/01` (canonicalisation and the Tanimoto 0.8 overlap filter), `03`
+(external featurisation), `06` (scoring) and `07` (the CYP2C19 cross-isoform probe).
 
 ### Approved-drug percentile context
 
