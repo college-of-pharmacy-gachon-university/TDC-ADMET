@@ -279,12 +279,11 @@ entry), ADMET-Stack scored better in **61 cases (70.1 %)**, tied once and was lo
 | MapLight+GNN | 11/22 (50.0 %) | −2.9 ± 7.4 % | 0.339 | +9.0 ± 15.0 % | 0.164 |
 
 Two-sided one-sample Wilcoxon signed-rank tests of per-endpoint improvements against zero.
-The advantage is concentrated in **regression**; classification is statistically
-indistinguishable from the strongest baselines. **CYP450 endpoints are the weakest category**
+The advantage is concentrated in **regression**; for classification no difference was detected against the strongest baselines, which is not the same as establishing equivalence (Supplementary Table S38). **CYP450 endpoints are the weakest category**
 for ADMET-Stack — better or equal in only 11 of 24 comparisons (46 %), versus 83 %
 (absorption), 92 % (excretion) and 81 % (toxicity).
 
-### External validation
+### External evaluation
 
 The endpoint-specific models were evaluated on external data from an in-house collection,
 PharmaBench, AutoML and Admetica. We call this external *evaluation* rather than independent
