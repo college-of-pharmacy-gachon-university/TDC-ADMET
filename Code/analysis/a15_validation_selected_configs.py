@@ -1,6 +1,6 @@
 # Part of the ADMET-Stack revision analysis set.
 # Table S44: configurations chosen on a held-out validation partition.
-# Inputs: run artifacts; set the path constant at the top
+# Inputs: run artifacts; set ADMET_GRID (see the top of the file)
 # -*- coding: utf-8 -*-
 """Harvest the complete validation/test grid and redo the per-endpoint selection honestly.
 
@@ -11,7 +11,7 @@ of the optimism (Table S40).
 
 Both become unnecessary. The results tree
 
-    G:\\K-MELLODDY-Project\\data\\ADMET_PK_Public_Dataset\\00_00_TDC_data
+    $ADMET_GRID
         <legacy configuration>\\<endpoint>\\<endpoint>_Outpus\\
             <endpoint>_validation_test_metrics_sf_scaled.csv
 
@@ -38,7 +38,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, r"E:\ADMET_Stack_project_for_review261003\Repo_Ready_20261007\src")
 from admet_config import ENDPOINTS, LEGACY_FOLDER  # noqa: E402
 
-GRID = (r"G:\K-MELLODDY-Project\data\ADMET_PK_Public_Dataset\00_00_TDC_data")
+# Point this at a local copy of the results tree before running:
+#   ADMET_GRID  holds <legacy configuration>/<endpoint>/<endpoint>_Outpus/
+GRID = os.environ.get("ADMET_GRID",
+                      os.path.join(os.path.dirname(HERE), "data", "grid"))
 CFG_OF_FOLDER = {v: k for k, v in LEGACY_FOLDER.items()}
 # the column each endpoint's official metric lives in, and whether larger is better
 METRIC_COL = {"AUROC": ("AUROC", True), "AUPRC": ("AUPRC", True),

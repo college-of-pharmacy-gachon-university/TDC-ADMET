@@ -1,6 +1,6 @@
 # Part of the ADMET-Stack revision analysis set.
 # Diagnostics for the two external sets with below-chance AUROC.
-# Inputs: run artifacts; set the path constant at the top
+# Inputs: run artifacts; set ADMET_ADMETICA and ADMET_TDC (see the top of the file)
 # -*- coding: utf-8 -*-
 """Diagnose the two below-chance external results.
 
@@ -19,9 +19,15 @@ import pandas as pd
 
 sys.stdout.reconfigure(encoding="utf8")
 
-ADM = (r"G:\K-MELLODDY-Project\data\06_ADMET_Admetica"
-       r"\datagrok-ai admetica main ADMET\Admetica_canonical_SMILES_all")
-TDC = r"G:\K-MELLODDY-Project\data\04_TDC_data"
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+# Point these at local copies before running:
+#   ADMET_ADMETICA  folder holding the canonical Admetica endpoint folders
+#   ADMET_TDC       folder holding the TDC endpoint CSVs
+ADM = os.environ.get("ADMET_ADMETICA",
+                     os.path.join(os.path.dirname(HERE), "data", "admetica"))
+TDC = os.environ.get("ADMET_TDC",
+                     os.path.join(os.path.dirname(HERE), "data", "tdc"))
 
 CASES = [
     ("BBB", os.path.join(ADM, "canonical_bbb", "canonical_bbb.csv"),

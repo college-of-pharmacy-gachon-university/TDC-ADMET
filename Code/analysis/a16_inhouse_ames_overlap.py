@@ -1,6 +1,6 @@
 # Part of the ADMET-Stack revision analysis set.
 # Section 2.8.4: overlap between the in-house AMES collection and TDC AMES.
-# Inputs: run artifacts; set the path constant at the top
+# Inputs: run artifacts; set ADMET_INHOUSE and ADMET_TDC (see the top of the file)
 # -*- coding: utf-8 -*-
 """The overlap check Section 2.8.5 asks for, on the in-house AMES set.
 
@@ -33,9 +33,17 @@ RDLogger.DisableLog("rdApp.*")
 sys.stdout.reconfigure(encoding="utf8")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-IH = (r"G:\K-MELLODDY-Project\data\02_in-house_CSV_files\Ames_inhouse"
-      r"\Ames_mutagenicity_canonical.csv")
-TDC_CSV = r"G:\K-MELLODDY-Project\data\04_TDC_data\AMES.csv"
+# The in-house Ames collection is under embargo and is not distributed with this
+# repository. Point these at local copies before running:
+#   ADMET_INHOUSE  folder holding Ames_mutagenicity_canonical.csv
+#   ADMET_TDC      folder holding the TDC endpoint CSVs
+INHOUSE_DIR = os.environ.get("ADMET_INHOUSE",
+                             os.path.join(os.path.dirname(HERE), "data", "inhouse"))
+TDC_DIR = os.environ.get("ADMET_TDC",
+                         os.path.join(os.path.dirname(HERE), "data", "tdc"))
+
+IH = os.path.join(INHOUSE_DIR, "Ames_mutagenicity_canonical.csv")
+TDC_CSV = os.path.join(TDC_DIR, "AMES.csv")
 THRESHOLD = 0.8
 GEN = rdFingerprintGenerator.GetMorganGenerator(radius=2, fpSize=2048)
 

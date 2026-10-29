@@ -1,6 +1,6 @@
 # Part of the ADMET-Stack revision analysis set.
 # Section 2.8.4: metrics on the deduplicated, overlap-filtered AMES subset.
-# Inputs: run artifacts; set the path constant at the top
+# Inputs: run artifacts; set ADMET_INHOUSE and ADMET_INHOUSE_PRED (see the top of the file)
 # -*- coding: utf-8 -*-
 """Recompute the in-house AMES evaluation on the set the Methods section describes.
 
@@ -30,10 +30,16 @@ from sklearn.metrics import (accuracy_score, average_precision_score,
 
 sys.stdout.reconfigure(encoding="utf8")
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = (r"G:\K-MELLODDY-Project\data\02_in-house_CSV_files\Ames_inhouse"
-       r"\Ames_mutagenicity_canonical.csv")
-PRED = (r"G:\K-MELLODDY-Project\data\02_in-house_CSV_files\in-house_data"
-        r"\in-house_canonical_SMILES\ames_in_house\5Folds\ames_Outputs")
+
+# The in-house Ames collection is under embargo and is not distributed with this
+# repository. Point these at local copies before running:
+#   ADMET_INHOUSE       folder holding Ames_mutagenicity_canonical.csv
+#   ADMET_INHOUSE_PRED  folder holding the per-seed Model_*_actual_vs_predicted.csv files
+INHOUSE_DIR = os.environ.get("ADMET_INHOUSE",
+                             os.path.join(os.path.dirname(HERE), "data", "inhouse"))
+SRC = os.path.join(INHOUSE_DIR, "Ames_mutagenicity_canonical.csv")
+PRED = os.environ.get("ADMET_INHOUSE_PRED",
+                      os.path.join(INHOUSE_DIR, "ames_predictions"))
 NBOOT = 2000
 RNG = np.random.default_rng(7)
 
